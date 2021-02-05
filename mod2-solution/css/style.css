@@ -1,0 +1,84 @@
+*
+{		
+	box-sizing: border-box;
+	
+}
+
+h1
+{
+	font-size:175%;
+}
+p
+{
+	padding: 10px;
+	border: 1px solid black;
+	margin: 10px;
+	position: relative;
+	top: 0;
+	left: 0;
+	background-color: grey;
+}
+
+.row
+{
+	width: 100%;
+}
+
+a
+{
+	position: absolute;
+	top: 0;
+	border: 1px solid black;
+	padding: 0px 10px 0px 10px;
+	left: calc(100% - 60px);
+	width: 60px;
+	text-align: center;
+	font-size: 125%;
+}
+
+#a1
+{
+	background-color: red;
+}
+
+#a2
+{
+	background-color: green;
+}
+
+#a3
+{
+	background-color: blue;
+}
+
+@media(min-width: 992px)/*desktop*/
+{
+	p
+	{	
+		float: left;
+		width: calc(33.33% - 20px);	/*minus the margin px from the width size*/
+	}
+}
+
+@media(min-width: 768px) and (max-width: 991px)/*table*/
+{
+	#p1, #p2
+	{
+		float: left;
+		width: calc(50% - 20px);
+	}
+
+	#p3
+	{
+		clear: both;
+		width: calc(100% - 20px);
+	}
+}
+
+@media(max-width: 767px)/*mobile*/
+{
+	p
+	{
+		width: calc(100% - 20px);
+	}
+}	
